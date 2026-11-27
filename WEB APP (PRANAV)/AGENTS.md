@@ -13,6 +13,8 @@ Read the root [`AGENTS.md`](../AGENTS.md) first.
   - `npx shadcn@latest add @react-bits/<component>` (browse https://reactbits.dev)
   - `npx shadcn@latest add @watermelon/<component>` (browse https://ui.watermelon.sh)
 
+- **Libraries.dev** UI effects (installed): `border-beam`, `thinking-orbs`, `liquid-gooey`, `voice-glow`, `voice-ring`, `distortion-waves`, `bot-avatars`, `metal-fx`, `img-fx`. Great for Pyro's assistant (thinking orbs, voice ring, bot avatar) and alert highlights (border beam). Read the `libraries-dev` skill's reference file before using one — never guess props. Docs: https://libraries.dev
+
 Run: `npm install`, then `npm run dev` → http://localhost:3000
 
 ## Agent tools in this folder
@@ -25,6 +27,7 @@ Run: `npm install`, then `npm run dev` → http://localhost:3000
   - `impeccable` — design critique, audit, polish
   - `emil-design-eng` — Emil Kowalski's animation & UI polish
   - `apple-design` — Apple-style motion, gestures, materials, type
+  - `libraries-dev` — how to use the Libraries.dev effects above, and where they fit
   Use them for any UI or animation work. Respect `prefers-reduced-motion`.
 
 <!-- BEGIN:nextjs-agent-rules -->

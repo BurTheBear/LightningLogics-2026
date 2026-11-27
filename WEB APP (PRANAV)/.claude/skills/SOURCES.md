@@ -9,3 +9,4 @@ Copied from upstream (each folder keeps its LICENSE). To update, re-copy from th
 | impeccable | github.com/pbakaus/impeccable | 2fc5e14 |
 | emil-design-eng | github.com/emilkowalski/skill | 64eb3de |
 | apple-design | github.com/emilkowalski/skill | 64eb3de |
+| libraries-dev | github.com/Jakubantalik/Libraries.dev | dafcfc0 |
