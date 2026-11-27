@@ -1,9 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Static export: builds plain files into `out/` for Cloudflare Pages (.pages.dev)
+  output: "export",
+  images: { unoptimized: true },
   turbopack: {
     rules: {
       "*.css": {
