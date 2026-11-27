@@ -17,6 +17,8 @@ Run: `npm install`, then `npm run dev` → http://localhost:3000
 
 ## Agent tools in this folder
 - **Playwright MCP** — lets the agent open the site in a real browser, click around, and screenshot. Config: `.mcp.json` (Claude Code) and `.vscode/mcp.json` (Copilot in VS Code). Open this `WEB-APP` folder as the project for them to load.
+- **shadcn MCP** — lets the agent search and add components from shadcn, React Bits, and Watermelon (uses the registries in `components.json`).
+- **Vercel MCP** — deploys, logs, and project settings on Vercel. Each person signs in to Vercel the first time it's used.
 - **Design skills** in `.claude/skills/` (Claude Code and Copilot both read this folder):
   - `ui-ux-pro-max` — styles, palettes, fonts, UX rules
   - `taste-skill` — avoids generic "AI-looking" UI

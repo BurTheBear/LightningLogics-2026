@@ -77,7 +77,29 @@ Suggested detection event (JSON), owned in `AI-ASSISTANT/`:
 { "type": "fire | smoke | spill", "confidence": 0.92, "zone": "grill", "timestamp": "2026-11-27T18:00:00Z" }
 ```
 
-## 6. Ground rules for all agents
+## 6. Staying in sync (5 people + their agents work at the same time)
+
+**Fetch constantly.** Run `git fetch --all` about **every minute** while working — always at the start of a task, before editing a file, and before every commit and push.
+- Claude Code does this automatically through a hook (`.claude/settings.json` → `.claude/hooks/git-sync-check.sh`). It fetches at most once a minute and warns you about new commits.
+- Copilot / other agents: there's no hook, so run `git fetch --all` yourself between steps.
+
+**Check if someone else's agent is working.** After fetching, run:
+```bash
+git log --remotes --since='15 minutes ago' --stat
+```
+If anyone pushed in the last ~15 minutes, assume they (or their agent) are **still working**:
+1. Merge their work into yours first: `git pull --no-rebase`.
+2. Don't edit the same files they just touched. If you must, tell the user and ask first.
+3. Changes in another person's folder = their area. Leave it alone unless the task needs it.
+
+**Commit and push small and often.**
+- Commit after **every small working change** (one fix, one feature piece) — don't save up big commits.
+- **Push right after each commit**, and at least every ~15 minutes while working, so others see your changes.
+- Before pushing: `git fetch` and merge. If the push is rejected, `git pull --no-rebase`, fix any conflicts, then push again.
+- **Never** force-push (`git push --force`) or rewrite history on a shared branch.
+- Never commit broken code to `main` — make sure it at least runs/builds.
+
+## 7. Ground rules for all agents
 
 - Keep it simple — this is a hackathon. Working demo > perfect code.
 - Explain things in plain, short language; some of the team are high-school students.
