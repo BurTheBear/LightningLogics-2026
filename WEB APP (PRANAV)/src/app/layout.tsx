@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "SpillBot",
+  title: "PyroBot",
   description: "Fire and spill safety bot dashboard for restaurants",
 };
 

@@ -12,7 +12,11 @@ Read this file first, then read the `AGENTS.md` inside the folder you are workin
 
 Every decision should answer: **"How does this help a real local restaurant?"**
 
-## 2. Our project — SpillBot (working name)
+## 2. Our project — PyroBot ("Pyro" for short)
+
+**Official name:** PyroBot (use this in the pitch, the web app title, and anything judges see).
+**Short, informal name:** Pyro (fine in chat, the AI assistant's voice, and UI copy like "Pyro is checking the grill").
+
 
 An AI safety robot for restaurant kitchens that **finds and handles fires and spills**, plus a web app for staff to control it.
 
