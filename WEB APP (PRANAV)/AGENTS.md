@@ -1,10 +1,10 @@
-# WEB-APP — Pranav
+# WEB APP (PRANAV) — Pranav
 
 Read the root [`AGENTS.md`](../AGENTS.md) first.
 
 **Scope:** frontend and web app only — supervisor and chef dashboards, role-based bot settings (zones, schedules, alerts, sensitivity), live status, alerts, login.
 
-**Not here:** robot code (→ `HARDWARE/`), detection models (→ `AI-VISION/`), the assistant/shared APIs (→ `AI-ASSISTANT/`; use its message formats).
+**Not here:** robot code (→ `HARDWARE (VIVAN)/`), detection models (→ `AI VISION (ATHARV)/`), the assistant/shared APIs (→ `AI ASSISTANT (ABHI)/`; use its message formats).
 
 ## Stack
 - **Next.js** (App Router, TypeScript, `src/`), **Tailwind CSS v4**, **shadcn/ui**
@@ -16,7 +16,7 @@ Read the root [`AGENTS.md`](../AGENTS.md) first.
 Run: `npm install`, then `npm run dev` → http://localhost:3000
 
 ## Agent tools in this folder
-- **Playwright MCP** — lets the agent open the site in a real browser, click around, and screenshot. Config: `.mcp.json` (Claude Code) and `.vscode/mcp.json` (Copilot in VS Code). Open this `WEB-APP` folder as the project for them to load.
+- **Playwright MCP** — lets the agent open the site in a real browser, click around, and screenshot. Config: `.mcp.json` (Claude Code) and `.vscode/mcp.json` (Copilot in VS Code). Open this `WEB APP (PRANAV)` folder as the project for them to load.
 - **shadcn MCP** — lets the agent search and add components from shadcn, React Bits, and Watermelon (uses the registries in `components.json`).
 - **Vercel MCP** — deploys, logs, and project settings on Vercel. Each person signs in to Vercel the first time it's used.
 - **Design skills** in `.claude/skills/` (Claude Code and Copilot both read this folder):

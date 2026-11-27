@@ -1,15 +1,15 @@
 hardware:
   - changed-files:
-      - any-glob-to-any-file: 'HARDWARE/**'
+      - any-glob-to-any-file: 'HARDWARE (VIVAN)/**'
 ai-vision:
   - changed-files:
-      - any-glob-to-any-file: 'AI-VISION/**'
+      - any-glob-to-any-file: 'AI VISION (ATHARV)/**'
 web-app:
   - changed-files:
-      - any-glob-to-any-file: 'WEB-APP/**'
+      - any-glob-to-any-file: 'WEB APP (PRANAV)/**'
 presentation:
   - changed-files:
-      - any-glob-to-any-file: 'PRESENTATION/**'
+      - any-glob-to-any-file: 'PRESENTATION (ABHI)/**'
 ai-assistant:
   - changed-files:
-      - any-glob-to-any-file: 'AI-ASSISTANT/**'
+      - any-glob-to-any-file: 'AI ASSISTANT (ABHI)/**'

@@ -33,11 +33,11 @@ An AI safety robot for restaurant kitchens that **finds and handles fires and sp
 
 | Folder | Owner(s) | What goes here |
 |---|---|---|
-| [`HARDWARE/`](HARDWARE/AGENTS.md) | **Vivan**, **Shreyansh** | Robot code (motors, sensors, water shooter, mopper), wiring, parts list, hardware notes |
-| [`AI-VISION/`](AI-VISION/AGENTS.md) | **Atharv** | Camera code, fire/smoke/spill detection models, datasets, training, image processing |
-| [`WEB-APP/`](WEB-APP/AGENTS.md) | **Pranav** | Next.js frontend + web app (supervisor & chef dashboards, settings, UI) |
-| [`PRESENTATION/`](PRESENTATION/AGENTS.md) | **Abhi** | Pitch deck, demo script, video, judging notes |
-| [`AI-ASSISTANT/`](AI-ASSISTANT/AGENTS.md) | **Abhi** | The AI assistant that links the robot and the web app; shared message formats/APIs between parts |
+| [`HARDWARE (VIVAN)/`](HARDWARE%20%28VIVAN%29/AGENTS.md) | **Vivan**, **Shreyansh** | Robot code (motors, sensors, water shooter, mopper), wiring, parts list, hardware notes |
+| [`AI VISION (ATHARV)/`](AI%20VISION%20%28ATHARV%29/AGENTS.md) | **Atharv** | Camera code, fire/smoke/spill detection models, datasets, training, image processing |
+| [`WEB APP (PRANAV)/`](WEB%20APP%20%28PRANAV%29/AGENTS.md) | **Pranav** | Next.js frontend + web app (supervisor & chef dashboards, settings, UI) |
+| [`PRESENTATION (ABHI)/`](PRESENTATION%20%28ABHI%29/AGENTS.md) | **Abhi** | Pitch deck, demo script, video, judging notes |
+| [`AI ASSISTANT (ABHI)/`](AI%20ASSISTANT%20%28ABHI%29/AGENTS.md) | **Abhi** | The AI assistant that links the robot and the web app; shared message formats/APIs between parts |
 
 **Abhi is the integrator** — anything that connects two or more parts (robot ↔ web app, vision ↔ robot, assistant ↔ anything) involves him.
 
@@ -47,15 +47,15 @@ Work out which folder a task belongs to from **what it's about**, even if the us
 
 | If the task mentions… | Route to |
 |---|---|
-| motors, wheels, driving, pump, nozzle, water shooter, mop, servo, Arduino, ESP32, Raspberry Pi GPIO, sensors (temp, flame, smoke, moisture), battery, wiring, firmware, robot movement | `HARDWARE/` |
-| camera, video feed, image, detection, YOLO / OpenCV / model, training, dataset, labeling, "is that a fire/spill?", confidence, frames | `AI-VISION/` |
-| page, dashboard, UI, button, login, roles (supervisor / chef), settings screen, React, Next.js, CSS, animation, frontend, charts, notifications on screen | `WEB-APP/` |
-| slides, pitch, deck, demo script, video, judges, story, branding for the pitch | `PRESENTATION/` |
-| assistant, chatbot, voice, LLM prompt, "connect X to Y", API between robot and web app, message format, end-to-end flow | `AI-ASSISTANT/` |
+| motors, wheels, driving, pump, nozzle, water shooter, mop, servo, Arduino, ESP32, Raspberry Pi GPIO, sensors (temp, flame, smoke, moisture), battery, wiring, firmware, robot movement | `HARDWARE (VIVAN)/` |
+| camera, video feed, image, detection, YOLO / OpenCV / model, training, dataset, labeling, "is that a fire/spill?", confidence, frames | `AI VISION (ATHARV)/` |
+| page, dashboard, UI, button, login, roles (supervisor / chef), settings screen, React, Next.js, CSS, animation, frontend, charts, notifications on screen | `WEB APP (PRANAV)/` |
+| slides, pitch, deck, demo script, video, judges, story, branding for the pitch | `PRESENTATION (ABHI)/` |
+| assistant, chatbot, voice, LLM prompt, "connect X to Y", API between robot and web app, message format, end-to-end flow | `AI ASSISTANT (ABHI)/` |
 
 Rules:
 1. **One clear match →** go there.
-2. **Matches several folders →** it's integration work. Put shared contracts (API shapes, message formats) in `AI-ASSISTANT/`, and only touch the other folders where needed. Tell the user which folders you touched.
+2. **Matches several folders →** it's integration work. Put shared contracts (API shapes, message formats) in `AI ASSISTANT (ABHI)/`, and only touch the other folders where needed. Tell the user which folders you touched.
 3. **No clear match →** ask the user one short question before writing code.
 4. **Don't edit another person's folder** unless the task needs it — and say so in your reply/PR.
 5. You can guess who is asking from the folder they're in or what they're asking about; tailor the answer to that person's part.
@@ -65,13 +65,13 @@ PRs are also auto-labeled by folder (see `.github/labeler.yml`), so the owner ca
 ## 5. How the parts talk to each other (starting plan — change as we build)
 
 ```
- Camera ──► AI-VISION ──(detection event)──► AI-ASSISTANT ◄──► WEB-APP (supervisor / chef)
+ Camera ──► AI VISION ──(detection event)──► AI ASSISTANT ◄──► WEB APP (supervisor / chef)
                                                   │
                                                   ▼
                                               HARDWARE (robot)
 ```
 
-Suggested detection event (JSON), owned in `AI-ASSISTANT/`:
+Suggested detection event (JSON), owned in `AI ASSISTANT (ABHI)/`:
 
 ```json
 { "type": "fire | smoke | spill", "confidence": 0.92, "zone": "grill", "timestamp": "2026-11-27T18:00:00Z" }
