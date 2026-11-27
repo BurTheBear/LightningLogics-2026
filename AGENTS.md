@@ -92,6 +92,8 @@ If anyone pushed in the last ~15 minutes, assume they (or their agent) are **sti
 2. Don't edit the same files they just touched. If you must, tell the user and ask first.
 3. Changes in another person's folder = their area. Leave it alone unless the task needs it.
 
+**Work on `main` only.** Don't create new branches and don't open pull requests — commit and push straight to `main`.
+
 **Commit and push small and often.**
 - Commit after **every small working change** (one fix, one feature piece) — don't save up big commits.
 - **Push right after each commit**, and at least every ~15 minutes while working, so others see your changes.
