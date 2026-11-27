@@ -1,0 +1,15 @@
+hardware:
+  - changed-files:
+      - any-glob-to-any-file: 'HARDWARE/**'
+ai-vision:
+  - changed-files:
+      - any-glob-to-any-file: 'AI-VISION/**'
+web-app:
+  - changed-files:
+      - any-glob-to-any-file: 'WEB-APP/**'
+presentation:
+  - changed-files:
+      - any-glob-to-any-file: 'PRESENTATION/**'
+ai-assistant:
+  - changed-files:
+      - any-glob-to-any-file: 'AI-ASSISTANT/**'
