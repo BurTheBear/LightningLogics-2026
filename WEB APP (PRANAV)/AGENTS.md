@@ -8,7 +8,7 @@ Read the root [`AGENTS.md`](../AGENTS.md) first.
 
 ## Stack
 - **Next.js** (App Router, TypeScript, `src/`), **Tailwind CSS v4**, **shadcn/ui**
-- **Lenis** smooth scroll + **GSAP** (`gsap`, `@gsap/react`) — already wired up in `src/components/smooth-scroll.tsx` and `src/app/layout.tsx`
+- **Lenis** smooth scroll + **GSAP** (`gsap`, `@gsap/react`) — used on the landing page only (`src/components/smooth-scroll.tsx`, wrapped in `src/app/page.tsx`); the dashboard has its own scroll areas
 - **React Bits** and **Watermelon UI** component registries — set up in `components.json`. Add a component with:
   - `npx shadcn@latest add @react-bits/<component>` (browse https://reactbits.dev)
   - `npx shadcn@latest add @watermelon/<component>` (browse https://ui.watermelon.sh)
@@ -17,9 +17,17 @@ Read the root [`AGENTS.md`](../AGENTS.md) first.
 
 Run: `npm install`, then `npm run dev` → http://localhost:3000
 
+## Pages (demo — nothing is live yet)
+- `/` landing page · `/sign-in`, `/sign-up` sample auth (no real auth) → `/dashboard`
+- `/dashboard` the AI assistant chat (main feature; scripted demo replies until Abhi's assistant is connected)
+- `/dashboard/overview`, `/incidents`, `/map`, `/team`, `/settings` (Supervisor and Chef tabs)
+- Demo data: `src/lib/demo-data.ts`. Brand colours/fonts: `src/app/globals.css`.
+- Photos go in `public/images/` (`robot-kitchen.png`, `robot-detail.png`, `supervisor-chef.png`, `spill-floor.png`); until they exist the page shows a placeholder.
+
 ## Agent tools in this folder
 - **Playwright MCP** — lets the agent open the site in a real browser, click around, and screenshot. Config: `.mcp.json` (Claude Code) and `.vscode/mcp.json` (Copilot in VS Code). Open this `WEB APP (PRANAV)` folder as the project for them to load.
 - **shadcn MCP** — lets the agent search and add components from shadcn, React Bits, and Watermelon (uses the registries in `components.json`).
+- **Clerk MCP** — Clerk auth docs/snippets for when real sign-in is added. Not used yet: `/sign-in` and `/sign-up` are sample pages that go straight to the demo dashboard.
 - **Vercel MCP** — deploys, logs, and project settings on Vercel. Each person signs in to Vercel the first time it's used.
 - **Design skills** in `.claude/skills/` (Claude Code and Copilot both read this folder):
   - `ui-ux-pro-max` — styles, palettes, fonts, UX rules
