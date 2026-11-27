@@ -50,7 +50,9 @@ LightningLogics-2026/
 | [`AI VISION (ATHARV)/`](AI%20VISION%20%28ATHARV%29/AGENTS.md) | **Atharv** | Camera code, fire/smoke/spill detection models, datasets, training, image processing |
 | [`WEB APP (PRANAV)/`](WEB%20APP%20%28PRANAV%29/AGENTS.md) | **Pranav** | Next.js frontend + web app (supervisor & chef dashboards, settings, UI) |
 | [`WEB APP (PRANAV)/AI ASSISTANT (ABHI)/`](WEB%20APP%20%28PRANAV%29/AI%20ASSISTANT%20%28ABHI%29/AGENTS.md) | **Abhi** | The AI assistant that links the robot and the web app; shared message formats/APIs between parts |
-| [`PRESENTATION (ABHI)/`](PRESENTATION%20%28ABHI%29/AGENTS.md) | **Abhi** | Pitch deck, demo script, video, judging notes |
+| [`PRESENTATION (ABHI)/`](PRESENTATION%20%28ABHI%29/AGENTS.md) | **Abhi** (+ Shreyansh's demo video) | Pitch deck, demo script, **Shreyansh's demo video**, judging notes |
+
+**Shreyansh's demo video goes in `PRESENTATION (ABHI)/`** (not `HARDWARE (VIVAN)/`), even though he also works on hardware.
 
 **Abhi is the integrator** — anything that connects two or more parts (robot ↔ web app, vision ↔ robot, assistant ↔ anything) involves him.
 The assistant lives **inside** the web app folder, but it's Abhi's area: Pranav's agents leave `AI ASSISTANT (ABHI)/` alone, and Abhi's agents stay inside it unless wiring it into the web app.
