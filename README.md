@@ -8,6 +8,6 @@ An AI robot that finds and handles **fires and spills** in restaurant kitchens, 
 | `AI VISION (ATHARV)/` | Atharv |
 | `WEB APP (PRANAV)/` | Pranav |
 | `PRESENTATION (ABHI)/` | Abhi |
-| `AI ASSISTANT (ABHI)/` | Abhi |
+| `WEB APP (PRANAV)/AI ASSISTANT (ABHI)/` | Abhi |
 
 AI agents: start with [`AGENTS.md`](AGENTS.md).

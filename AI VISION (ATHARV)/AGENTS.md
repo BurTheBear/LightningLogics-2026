@@ -4,7 +4,7 @@ Read the root [`AGENTS.md`](../AGENTS.md) first.
 
 **Scope:** everything camera and AI-vision — camera capture, fire/smoke/spill detection models (e.g. YOLO, OpenCV), datasets, labeling, training, accuracy testing.
 
-**Not here:** motor/sensor code (→ `HARDWARE (VIVAN)/`), UI (→ `WEB APP (PRANAV)/`), the assistant (→ `AI ASSISTANT (ABHI)/`).
+**Not here:** motor/sensor code (→ `HARDWARE (VIVAN)/`), UI (→ `WEB APP (PRANAV)/`), the assistant (→ `WEB APP (PRANAV)/AI ASSISTANT (ABHI)/`).
 
 Guidelines:
 - Output detections as the shared JSON event (see root AGENTS.md §5).

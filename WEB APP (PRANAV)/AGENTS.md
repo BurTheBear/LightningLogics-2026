@@ -4,7 +4,7 @@ Read the root [`AGENTS.md`](../AGENTS.md) first.
 
 **Scope:** frontend and web app only — supervisor and chef dashboards, role-based bot settings (zones, schedules, alerts, sensitivity), live status, alerts, login.
 
-**Not here:** robot code (→ `HARDWARE (VIVAN)/`), detection models (→ `AI VISION (ATHARV)/`), the assistant/shared APIs (→ `AI ASSISTANT (ABHI)/`; use its message formats).
+**Not here:** robot code (→ `HARDWARE (VIVAN)/`), detection models (→ `AI VISION (ATHARV)/`), the assistant/shared APIs (→ `AI ASSISTANT (ABHI)/` in this folder — Abhi's area, leave it alone; use its message formats).
 
 ## Stack
 - **Next.js** (App Router, TypeScript, `src/`), **Tailwind CSS v4**, **shadcn/ui**

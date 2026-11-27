@@ -12,4 +12,4 @@ presentation:
       - any-glob-to-any-file: 'PRESENTATION (ABHI)/**'
 ai-assistant:
   - changed-files:
-      - any-glob-to-any-file: 'AI ASSISTANT (ABHI)/**'
+      - any-glob-to-any-file: 'WEB APP (PRANAV)/AI ASSISTANT (ABHI)/**'
