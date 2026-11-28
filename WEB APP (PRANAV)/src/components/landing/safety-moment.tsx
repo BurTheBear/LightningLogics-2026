@@ -29,7 +29,7 @@ export function SafetyMoment({ text }: { text: string }) {
   );
 
   return (
-    <p ref={ref} className="text-balance font-display text-[clamp(2.1rem,4.6vw,4.4rem)] leading-[1.06] tracking-[-0.025em] text-white">
+    <p ref={ref} className="text-balance font-semibold text-[clamp(2.1rem,4.6vw,4.4rem)] leading-[1.02] tracking-[-0.05em] text-white">
       {text.split(" ").map((w, i) => (
         <span key={i} className="sm-word">
           {w}{" "}

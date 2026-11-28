@@ -242,3 +242,16 @@ html {
     to { opacity: 1; transform: none; }
   }
 }
+
+/* Pulse travelling across the how-it-works steps */
+@media (prefers-reduced-motion: no-preference) {
+  .lane-pulse-x {
+    animation: lane-pulse-x 3.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+  }
+  @keyframes lane-pulse-x {
+    0% { left: -4rem; opacity: 0; }
+    15% { opacity: 1; }
+    85% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+  }
+}
