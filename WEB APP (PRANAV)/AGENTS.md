@@ -27,7 +27,7 @@ The site is a **static export** (`output: "export"` in `next.config.ts`): `npm r
 - `/dashboard` the AI assistant chat (main feature; scripted demo replies until Abhi's assistant is connected)
 - `/dashboard/overview`, `/incidents`, `/map`, `/team`, `/settings` (Supervisor and Chef tabs)
 - Demo data: `src/lib/demo-data.ts`. Brand colours/fonts: `src/app/globals.css`.
-- **3D robot:** `src/components/device/pyro-scene.tsx` models PyroBot in code (three.js / React Three Fiber). Change shapes and colours there to match the real prototype.
+- **3D robot:** `src/components/device/pyro-scene.tsx` models PyroBot in code (three.js / React Three Fiber). Change shapes and colours there to match the real prototype. The robot is a **car-style four-wheel rover**. `src/components/device/story-stage.tsx` is the scroll story (drive in → spot fire → confirm → lay blanket → back off); its timing lives in `steps` and in the `story` branch of `pyro-scene.tsx`.
 - **Demo video:** put Shreyansh's video at `public/videos/pyro-demo.mp4` and it plays in the Demo section automatically.
 - Photos go in `public/images/` (`robot-kitchen.png`, `robot-detail.png`, `supervisor-chef.png`, `spill-floor.png`); until they exist the page shows a placeholder.
 

@@ -4,6 +4,7 @@ import { SmoothScroll } from "@/components/smooth-scroll";
 import { EnterOnLoad } from "@/components/enter";
 import { DeviceHero } from "@/components/landing/device-hero";
 import { DeviceStage } from "@/components/device/device-stage";
+import { StoryStage } from "@/components/device/story-stage";
 import { ProductFrame } from "@/components/landing/product-frame";
 import { SafetyMoment } from "@/components/landing/safety-moment";
 import { PhotoSlot } from "@/components/photo-slot";
@@ -17,8 +18,8 @@ const h2 = "text-balance font-semibold leading-[0.98] tracking-[-0.05em]";
 const parts = [
   { name: "Camera dome", body: "AI vision watches the line for flame, smoke and anything wet on the floor." },
   { name: "Fire-blanket arm", body: "Lays a fire blanket over a small pan fire. No water, because water spreads grease fires." },
-  { name: "Sensor band", body: "Heat and smoke sensors all the way round, with a light strip that shows what Pyro is doing." },
-  { name: "Mop pad", body: "Wipes up oil and water the moment a spill is spotted, then drives back to its dock." },
+  { name: "Four-wheel base", body: "A small rover that drives the aisles, with heat and smoke sensors down each side and a light bar that shows what Pyro is doing." },
+  { name: "Mop pad", body: "Slung between the wheels. Wipes up oil and water the moment a spill is spotted, then drives back to its dock." },
   { name: "Emergency stop", body: "One red button on top stops everything, instantly." },
 ];
 
@@ -28,6 +29,9 @@ export default function Home() {
       <EnterOnLoad />
       <div className="flex flex-col gap-2 bg-[#1c1b19] p-2 md:gap-3 md:p-3">
         <DeviceHero />
+
+        {/* Scroll story: the fire response, played by scrolling */}
+        <StoryStage />
 
         {/* Demo video */}
         <section id="demo" className={`${card} bg-[#0f1115] text-white`}>
@@ -50,7 +54,7 @@ export default function Home() {
               <DeviceStage view="anatomy" className="absolute inset-0" />
             </div>
             <div>
-              <h2 className={`${h2} text-[clamp(2.2rem,4.4vw,3.8rem)]`}>Small enough to fit under the pass.</h2>
+              <h2 className={`${h2} text-[clamp(2.2rem,4.4vw,3.8rem)]`}>A small rover built for the kitchen floor.</h2>
               <dl className="mt-10 divide-y divide-line border-y border-line">
                 {parts.map((p) => (
                   <div key={p.name} className="grid gap-1 py-4 sm:grid-cols-[170px_1fr] sm:gap-6">
