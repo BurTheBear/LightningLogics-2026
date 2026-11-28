@@ -26,7 +26,7 @@ An AI safety robot for restaurant kitchens that **finds and handles fires and sp
 
 | Part | What it does |
 |---|---|
-| **Robot (hardware)** | Roomba-style bot that drives around the kitchen. Has a **robotic arm with a fire blanket** that it lays over small fires (no water), a **detector** (fire / smoke / spill sensors), and a **mopper** to clean spills. |
+| **Robot (hardware)** | Small **car-style robot** (four-wheel rover, not a round Roomba) that drives around the kitchen. Has a **robotic arm with a fire blanket** that it lays over small fires (no water), a **detector** (fire / smoke / spill sensors), and a **mopper** to clean spills. |
 | **AI vision** | Camera + AI model that spots fires, smoke, and spills, and tells the robot where to go. |
 | **Web app** | Dashboard for the **restaurant supervisor** and the **chefs**. Each role has different settings for configuring the bot (zones, schedules, alerts, sensitivity, etc.). |
 | **AI assistant** | Chat/voice assistant that connects the robot and the web app — staff can ask it things like "Is the kitchen clear?" or "Send the bot to station 3." |

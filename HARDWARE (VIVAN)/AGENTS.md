@@ -2,7 +2,7 @@
 
 Read the root [`AGENTS.md`](../AGENTS.md) first.
 
-**Scope:** robot code and hardware knowledge only — driving/navigation, sensors (flame, smoke, temperature, moisture), the **robotic arm with a fire blanket** (servos, gripper/release, blanket storage), the mopper, power, wiring, parts list.
+**Scope:** robot code and hardware knowledge only. The robot is a **small car-style rover with four wheels** (not a round Roomba). Covers driving/navigation, sensors (flame, smoke, temperature, moisture), the **robotic arm with a fire blanket** (servos, gripper/release, blanket storage), the mopper, power, wiring, parts list.
 
 **Not here:** camera/AI detection (→ `AI VISION (ATHARV)/`), dashboards (→ `WEB APP (PRANAV)/`), the assistant or shared APIs (→ `WEB APP (PRANAV)/AI ASSISTANT (ABHI)/`).
 
