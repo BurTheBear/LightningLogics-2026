@@ -133,8 +133,8 @@ function SupervisorSettings() {
   return (
     <>
       <Section title="Safety" desc="These protect your staff and can't be turned off in the demo.">
-        <Row label="A person confirms every water burst" hint="Pyro stops and asks before any water goes out.">
-          <Toggle defaultOn locked label="A person confirms every water burst" />
+        <Row label="A person confirms every fire blanket" hint="Pyro stops and asks before the arm lays the blanket.">
+          <Toggle defaultOn locked label="A person confirms every fire blanket" />
         </Row>
         <Row label="Who can confirm" hint="Anyone listed here gets the confirm button on their phone.">
           <select className={selectCls} defaultValue="station">

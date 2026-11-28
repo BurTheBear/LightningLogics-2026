@@ -26,8 +26,8 @@ export default function Home() {
               The kitchen safety robot for independent restaurants.
             </h1>
             <p data-enter="120" className="mt-6 max-w-[48ch] text-[17px] leading-[1.6] text-ink-2">
-              PyroBot patrols your kitchen floor and watches for small fires and spills. It knocks down a flare-up with a short
-              burst of water, mops up a spill, and tells your supervisor and chefs what it did.
+              PyroBot patrols your kitchen floor and watches for small fires and spills. It smothers a small flare-up with a fire
+              blanket from its arm, mops up a spill, and tells your supervisor and chefs what it did.
             </p>
             <div data-enter="220" className="mt-9 flex flex-wrap items-center gap-3">
               <Link
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
             <p data-enter="300" className="mt-8 flex items-center gap-2 text-[14px] text-ink-2">
               <Hand className="size-4 text-ember" />
-              Every water burst waits for a person to tap confirm.
+              The fire-blanket arm waits for a person to tap confirm.
             </p>
           </div>
           <div data-enter="160" className="relative">
@@ -99,7 +99,7 @@ export default function Home() {
               {[
                 { icon: Camera, title: "Camera and AI vision", body: "Watches each station and flags fire, smoke or a spill, with where it is and how sure it is." },
                 { icon: MessagesSquare, title: "Pyro assistant", body: "Spills get mopped straight away. Fire waits for a supervisor or chef to tap confirm." },
-                { icon: Bot, title: "The robot", body: "Drives to the spot, fires a short burst of water or mops, then reports back and docks." },
+                { icon: Bot, title: "The robot", body: "Drives to the spot, lays a fire blanket with its arm or mops, then reports back and docks." },
               ].map((s, i, arr) => (
                 <li key={s.title} className="relative flex gap-5 px-6 py-6 sm:px-8">
                   <div className="relative flex flex-col items-center">
@@ -121,7 +121,7 @@ export default function Home() {
             </ol>
             <PhotoSlot
               file="robot-detail.png"
-              alt="Close-up of PyroBot's water nozzle, camera dome and mop pad on wet tile"
+              alt="Close-up of PyroBot's fire-blanket arm, camera dome and mop pad on the tile floor"
               className="min-h-[340px] rounded-2xl"
             />
           </div>
@@ -162,7 +162,7 @@ export default function Home() {
                 <h3 className="flex items-center gap-2 text-[16px] font-semibold"><ClipboardList className="size-4 text-ember" /> Supervisor</h3>
                 <ul className="mt-3 space-y-2.5 text-[15px] leading-[1.5] text-ink-2">
                   <li>Draw zones and set patrol schedules</li>
-                  <li>Choose who confirms a water burst</li>
+                  <li>Choose who confirms the fire blanket</li>
                   <li>Tune how sensitive each station is</li>
                   <li>Shift reports and the full incident log</li>
                 </ul>
@@ -183,7 +183,7 @@ export default function Home() {
         {/* Safety moment */}
         <section id="safety" className="bg-[#171512]">
           <div className={`${wrap} flex min-h-[100svh] flex-col justify-center gap-14 py-28`}>
-            <SafetyMoment text="Pyro never fires water on its own. A person always confirms, and a big red button on the robot stops it cold." />
+            <SafetyMoment text="Pyro never drops its fire blanket on its own. A person always confirms, and a big red button on the robot stops it cold." />
             <div className="grid gap-8 border-t border-white/10 pt-10 text-[15px] leading-[1.6] text-white/70 sm:grid-cols-3">
               <p><span className="font-medium text-white">Small flare-ups only.</span> Pyro handles the first seconds of a small fire. It works alongside your extinguishers and hood system and never replaces them.</p>
               <p><span className="font-medium text-white">Every event logged.</span> Who confirmed, what Pyro saw, how sure it was, and what it did, ready for your health inspector.</p>

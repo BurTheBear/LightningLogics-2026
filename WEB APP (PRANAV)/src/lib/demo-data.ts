@@ -30,7 +30,7 @@ export const robot = {
   model: "PyroBot P1",
   state: "Patrolling",
   battery: 82,
-  water: 64, // percent of tank
+  blanket: "Loaded", // fire blanket on the arm
   mopPad: "Fresh",
   position: { x: 47, y: 30 },
   lastSeen: "just now",
@@ -52,7 +52,7 @@ export type Incident = {
 export const incidents: Incident[] = [
   { id: "INC-1042", time: "7:42 pm", day: "Today", kind: "Spill", zone: "Fryers", action: "Mopped, 1 pass", confirmedBy: "Auto (mop)", confidence: 0.94, status: "Resolved" },
   { id: "INC-1041", time: "7:18 pm", day: "Today", kind: "Smoke", zone: "Grill", action: "Alert sent to grill station", confirmedBy: "Marco R.", confidence: 0.71, status: "Watching" },
-  { id: "INC-1040", time: "6:05 pm", day: "Today", kind: "Fire", zone: "Grill", action: "Water burst, 2 s", confirmedBy: "Dana K.", confidence: 0.97, status: "Resolved" },
+  { id: "INC-1040", time: "6:05 pm", day: "Today", kind: "Fire", zone: "Grill", action: "Fire blanket laid over pan", confirmedBy: "Dana K.", confidence: 0.97, status: "Resolved" },
   { id: "INC-1039", time: "9:51 pm", day: "Yesterday", kind: "Spill", zone: "Dish", action: "Mopped, 2 passes", confirmedBy: "Auto (mop)", confidence: 0.9, status: "Resolved" },
   { id: "INC-1038", time: "8:27 pm", day: "Yesterday", kind: "Spill", zone: "Pass", action: "Dismissed — sauce on a plate, not the floor", confirmedBy: "Dana K.", confidence: 0.58, status: "Dismissed" },
   { id: "INC-1037", time: "12:14 pm", day: "Tue", kind: "Smoke", zone: "Fryers", action: "Alert sent to fryer station", confirmedBy: "Leo T.", confidence: 0.66, status: "Resolved" },

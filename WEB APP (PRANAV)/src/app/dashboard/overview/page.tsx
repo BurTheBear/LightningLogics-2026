@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { BatteryMedium, Droplet, Layers, MapPin, ArrowRight } from "lucide-react";
+import { BatteryMedium, ShieldCheck, Layers, MapPin, ArrowRight } from "lucide-react";
 import { PageHeader, StatusPill } from "@/components/dashboard/shell";
 import { KitchenMap } from "@/components/kitchen-map";
 import { robot, zones, incidents } from "@/lib/demo-data";
@@ -32,7 +32,7 @@ export default function OverviewPage() {
             <dl className="mt-5 divide-y divide-line text-[14.5px]">
               {[
                 { icon: BatteryMedium, label: "Battery", value: `${robot.battery}%`, bar: robot.battery },
-                { icon: Droplet, label: "Water tank", value: `${robot.water}%`, bar: robot.water },
+                { icon: ShieldCheck, label: "Fire blanket", value: robot.blanket },
                 { icon: Layers, label: "Mop pad", value: robot.mopPad },
                 { icon: MapPin, label: "Position", value: "Center aisle" },
               ].map((r) => (

@@ -80,7 +80,7 @@ const script: Record<ScriptId, { prompt: string; title: string; reply: Reply }> 
         { title: "Walk the hot line", done: true, sub: ["Grill: flat-top off, no smoke", "Fryers: floor dry after 7:42 pm spill"] },
         { title: "Mop the wet zones", done: false, sub: ["Dish pit: one pass", "Pass: spot check"] },
         { title: "Check the cold side", done: false, sub: ["Walk-in door closed", "Prep floor clear"] },
-        { title: "Dock and report", done: false, sub: ["Refill water tank", "Send the shift report to Dana"] },
+        { title: "Dock and report", done: false, sub: ["Reload the fire blanket", "Send the shift report to Dana"] },
       ],
       heading: "Let's close up",
       followUps: [
@@ -95,7 +95,7 @@ const script: Record<ScriptId, { prompt: string; title: string; reply: Reply }> 
     reply: {
       paragraphs: [
         "On my way. Pyro is in the center aisle, so the fryers are about 15 seconds away. I'll check the floor with the camera and mop if anything's wet.",
-        "Spills get mopped straight away. If I see fire, I'll stop and ask the fryer station to confirm before any water goes out.",
+        "Spills get mopped straight away. If I see fire, I'll stop and ask the fryer station to confirm before the arm lays the fire blanket.",
       ],
       status: [{ icon: "spill", text: "Fryers: last spill cleared 7:42 pm" }],
       link: { href: "/dashboard/map", label: "Watch Pyro on the kitchen map" },
