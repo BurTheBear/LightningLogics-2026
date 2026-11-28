@@ -6,5 +6,5 @@ Read the root [`AGENTS.md`](../AGENTS.md) first.
 
 Guidelines:
 - This folder is the single source of truth for message formats. If you change one, tell the owners of `HARDWARE (VIVAN)/`, `AI VISION (ATHARV)/`, and `WEB APP (PRANAV)/`.
-- Never let the assistant fire the water shooter without a human confirming.
+- Never let the assistant deploy the fire-blanket arm without a human confirming.
 - Keep API keys in `.env` (never committed).

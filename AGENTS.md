@@ -26,12 +26,12 @@ An AI safety robot for restaurant kitchens that **finds and handles fires and sp
 
 | Part | What it does |
 |---|---|
-| **Robot (hardware)** | Roomba-style bot that drives around the kitchen. Has a **water shooter** for small fires, a **detector** (fire / smoke / spill sensors), and a **mopper** to clean spills. |
+| **Robot (hardware)** | Roomba-style bot that drives around the kitchen. Has a **robotic arm with a fire blanket** that it lays over small fires (no water), a **detector** (fire / smoke / spill sensors), and a **mopper** to clean spills. |
 | **AI vision** | Camera + AI model that spots fires, smoke, and spills, and tells the robot where to go. |
 | **Web app** | Dashboard for the **restaurant supervisor** and the **chefs**. Each role has different settings for configuring the bot (zones, schedules, alerts, sensitivity, etc.). |
 | **AI assistant** | Chat/voice assistant that connects the robot and the web app — staff can ask it things like "Is the kitchen clear?" or "Send the bot to station 3." |
 
-> ⚠️ Safety note for agents: real fire suppression is dangerous. Keep the water shooter for **small, contained demo fires** only, never suggest replacing real extinguishers or sprinkler systems, and always add a manual stop / human-confirm step for the shooter.
+> ⚠️ Safety note for agents: real fire suppression is dangerous. Keep the fire-blanket arm for **small, contained demo fires** only (e.g. a pan fire), never suggest replacing real extinguishers or hood/sprinkler systems, and always add a manual stop / human-confirm step before the arm deploys the blanket. The robot does **not** spray water — water makes grease fires worse.
 
 ## 3. Team & folder map
 
@@ -46,7 +46,7 @@ LightningLogics-2026/
 
 | Folder | Owner(s) | What goes here |
 |---|---|---|
-| [`HARDWARE (VIVAN)/`](HARDWARE%20%28VIVAN%29/AGENTS.md) | **Vivan**, **Shreyansh** | Robot code (motors, sensors, water shooter, mopper), wiring, parts list, hardware notes |
+| [`HARDWARE (VIVAN)/`](HARDWARE%20%28VIVAN%29/AGENTS.md) | **Vivan**, **Shreyansh** | Robot code (motors, sensors, fire-blanket arm, mopper), wiring, parts list, hardware notes |
 | [`AI VISION (ATHARV)/`](AI%20VISION%20%28ATHARV%29/AGENTS.md) | **Atharv** | Camera code, fire/smoke/spill detection models, datasets, training, image processing |
 | [`WEB APP (PRANAV)/`](WEB%20APP%20%28PRANAV%29/AGENTS.md) | **Pranav** | Next.js frontend + web app (supervisor & chef dashboards, settings, UI) |
 | [`WEB APP (PRANAV)/AI ASSISTANT (ABHI)/`](WEB%20APP%20%28PRANAV%29/AI%20ASSISTANT%20%28ABHI%29/AGENTS.md) | **Abhi** | The AI assistant that links the robot and the web app; shared message formats/APIs between parts |
@@ -62,7 +62,7 @@ The assistant lives **inside** the web app folder, but it's Abhi's area: Pranav'
 Work out which folder a task belongs to from **what it's about**, even if the user doesn't name a folder. Then work only in that folder.
 
 ```
-                       ┌─ motors / sensors / pump / mop / wiring ─────► HARDWARE (VIVAN)/
+                       ┌─ motors / sensors / arm / mop / wiring ──────► HARDWARE (VIVAN)/
                        ├─ camera / detection / model / dataset ───────► AI VISION (ATHARV)/
    new task ──► what's ┼─ page / dashboard / UI / settings / CSS ─────► WEB APP (PRANAV)/
    it about?           ├─ assistant / chatbot / voice / API / connect ► WEB APP (PRANAV)/AI ASSISTANT (ABHI)/
@@ -73,7 +73,7 @@ Work out which folder a task belongs to from **what it's about**, even if the us
 
 | If the task mentions… | Route to |
 |---|---|
-| motors, wheels, driving, pump, nozzle, water shooter, mop, servo, Arduino, ESP32, Raspberry Pi GPIO, sensors (temp, flame, smoke, moisture), battery, wiring, firmware, robot movement | `HARDWARE (VIVAN)/` |
+| motors, wheels, driving, robotic arm, fire blanket, gripper, mop, servo, Arduino, ESP32, Raspberry Pi GPIO, sensors (temp, flame, smoke, moisture), battery, wiring, firmware, robot movement | `HARDWARE (VIVAN)/` |
 | camera, video feed, image, detection, YOLO / OpenCV / model, training, dataset, labeling, "is that a fire/spill?", confidence, frames | `AI VISION (ATHARV)/` |
 | page, dashboard, UI, button, login, roles (supervisor / chef), settings screen, React, Next.js, CSS, animation, frontend, charts, notifications on screen | `WEB APP (PRANAV)/` |
 | assistant, chatbot, voice, LLM prompt, "connect X to Y", API between robot and web app, message format, end-to-end flow | `WEB APP (PRANAV)/AI ASSISTANT (ABHI)/` |
