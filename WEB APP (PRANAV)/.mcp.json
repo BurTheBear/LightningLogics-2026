@@ -23,17 +23,9 @@
       "type": "http",
       "url": "https://mcp.clerk.com/mcp"
     },
-    "cloudflare-builds": {
+    "cloudflare": {
       "type": "http",
-      "url": "https://builds.mcp.cloudflare.com/mcp"
-    },
-    "cloudflare-bindings": {
-      "type": "http",
-      "url": "https://bindings.mcp.cloudflare.com/mcp"
-    },
-    "cloudflare-docs": {
-      "type": "http",
-      "url": "https://docs.mcp.cloudflare.com/mcp"
+      "url": "https://mcp.cloudflare.com/mcp"
     }
   }
 }

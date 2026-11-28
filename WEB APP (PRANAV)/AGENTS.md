@@ -33,7 +33,7 @@ The site is a **static export** (`output: "export"` in `next.config.ts`): `npm r
 - **Playwright MCP** — lets the agent open the site in a real browser, click around, and screenshot. Config: `.mcp.json` (Claude Code) and `.vscode/mcp.json` (Copilot in VS Code). Open this `WEB APP (PRANAV)` folder as the project for them to load.
 - **shadcn MCP** — lets the agent search and add components from shadcn, React Bits, and Watermelon (uses the registries in `components.json`).
 - **Clerk MCP** — Clerk auth docs/snippets for when real sign-in is added. Not used yet: `/sign-in` and `/sign-up` are sample pages that go straight to the demo dashboard.
-- **Cloudflare MCP** (`cloudflare-builds`, `cloudflare-bindings`, `cloudflare-docs`) — Pages/Workers builds, account resources and docs. Each person signs in to Cloudflare the first time it's used.
+- **Cloudflare MCP** (`https://mcp.cloudflare.com/mcp`) — the full Cloudflare API: Pages/Workers, builds, account resources and docs. Each person signs in to Cloudflare the first time it's used.
 - **Vercel MCP** — deploys, logs, and project settings on Vercel. Each person signs in to Vercel the first time it's used.
 - **Design skills** in `.claude/skills/` (Claude Code and Copilot both read this folder):
   - `ui-ux-pro-max` — styles, palettes, fonts, UX rules
